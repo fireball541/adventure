@@ -28,7 +28,7 @@
 
 executesync("leon.adventure:kill enemies")
 executesync("leon.adventure:farm keys")
-leon.adventure.eod=ternary.int({cur_difficulty}<=50,leon.adventure.eod,1)
+leon.adventure.eod=ternary.int(adventure.hasItem("eodArmor"), 1, 0)
 
 leon.adventure.room_direction = ternary.string( \
 	{cur_difficulty}==0 && len(leon.adventure.room_direction)>0,{rotateLeft(leon.adventure.room_direction)}\
